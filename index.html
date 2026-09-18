@@ -1,101 +1,147 @@
 <!DOCTYPE html>
-<html lang="my">
+
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SN Photo Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SN Photography</title>
 
+```
 <style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f7f7f7;
-    color:#222;
-}
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-header{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:30px 15px;
-}
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        color: #222;
+    }
 
-header h1{
-    margin:0;
-    font-size:32px;
-}
+    header {
+        background: #111;
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+    }
 
-header p{
-    margin:8px 0 0;
-    color:#ccc;
-}
+    header h1 {
+        font-size: 45px;
+        margin-bottom: 12px;
+    }
 
-.container{
-    max-width:1100px;
-    margin:30px auto;
-    padding:0 15px;
-}
+    header p {
+        font-size: 18px;
+        color: #ccc;
+    }
 
-.welcome{
-    text-align:center;
-    margin-bottom:30px;
-}
+    .about {
+        text-align: center;
+        padding: 40px 20px;
+        background: white;
+    }
 
-.album{
-    background:white;
-    border-radius:15px;
-    padding:25px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-    text-align:center;
-}
+    .about h2 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
 
-.album h2{
-    margin-top:0;
-}
+    .about p {
+        color: #666;
+        font-size: 17px;
+    }
 
-.album button{
-    background:#111;
-    color:white;
-    border:0;
-    padding:12px 25px;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:16px;
-}
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 40px 25px;
+    }
 
-footer{
-    text-align:center;
-    padding:30px;
-    color:#777;
-}
+    .photo {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .photo img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .photo p {
+        text-align: center;
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    footer {
+        background: #111;
+        color: #aaa;
+        text-align: center;
+        padding: 30px 20px;
+    }
 </style>
+```
+
 </head>
 
 <body>
 
+```
 <header>
-    <h1>📸 SN Photo Gallery</h1>
-    <p>Beautiful moments, preserved forever.</p>
+    <h1>SN Photography</h1>
+    <p>Photography & Photo Editing</p>
 </header>
 
-<div class="container">
+<section class="about">
+    <h2>My Photography</h2>
+    <p>Welcome to my photography portfolio.</p>
+</section>
 
-    <div class="welcome">
-        <h2>မင်္ဂလာပါ ❤️</h2>
-        <p>မင်းရဲ့ အမှတ်တရဓာတ်ပုံတွေကို ဒီမှာကြည့်နိုင်ပါတယ်။</p>
+<section class="gallery">
+
+    <div class="photo">
+        <img src="photo1.jpg" alt="Photo 1">
+        <p>Photo 1</p>
     </div>
 
-    <div class="album">
-        <h2>💍 Wedding Album</h2>
-        <p>SN Photography</p>
-        <button>View Photos</button>
+    <div class="photo">
+        <img src="photo2.jpg" alt="Photo 2">
+        <p>Photo 2</p>
     </div>
 
-</div>
+    <div class="photo">
+        <img src="photo3.jpg" alt="Photo 3">
+        <p>Photo 3</p>
+    </div>
+
+    <div class="photo">
+        <img src="photo4.jpg" alt="Photo 4">
+        <p>Photo 4</p>
+    </div>
+
+    <div class="photo">
+        <img src="photo5.jpg" alt="Photo 5">
+        <p>Photo 5</p>
+    </div>
+
+    <div class="photo">
+        <img src="photo6.jpg" alt="Photo 6">
+        <p>Photo 6</p>
+    </div>
+
+</section>
 
 <footer>
     © 2026 SN Photography
 </footer>
+```
 
 </body>
 </html>
