@@ -72,7 +72,7 @@
             color: #111;
         }
 
-        /* GALLERY SECTION */
+        /* SECTIONS */
         .section {
             text-align: center;
             padding: 80px 20px;
@@ -84,14 +84,14 @@
         }
 
         .section p {
-            color: #999;
-            margin-bottom: 40px;
+            color: #aaa;
+            line-height: 1.8;
         }
 
         /* GALLERY */
         .gallery {
             max-width: 1100px;
-            margin: auto;
+            margin: 40px auto 0;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
@@ -111,7 +111,35 @@
             opacity: 0.85;
         }
 
-        /* FULL SCREEN IMAGE */
+        /* ABOUT */
+        .about-box {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .about-box p {
+            font-size: 18px;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #181818;
+        }
+
+        .contact p {
+            margin: 12px 0;
+        }
+
+        .contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* LIGHTBOX */
         .lightbox {
             display: none;
             position: fixed;
@@ -184,7 +212,7 @@
         <img src="IMG_1830.JPG" alt="SN Photography">
     </div>
 
-    <!-- HEADER -->
+    <!-- HOME -->
     <header>
         <h1>SN Photography</h1>
 
@@ -197,10 +225,10 @@
         </a>
     </header>
 
-    <!-- GALLERY -->
+    <!-- MY WORK -->
     <section class="section" id="gallery">
 
-        <h2>My Photography</h2>
+        <h2>My Work</h2>
 
         <p>
             Beautiful moments captured through my camera.
@@ -220,6 +248,58 @@
 
     </section>
 
+    <!-- ABOUT ME -->
+    <section class="section" id="about">
+
+        <div class="about-box">
+
+            <h2>About Me</h2>
+
+            <p>
+                I am a photographer and photo editor who loves
+                capturing beautiful moments and creating meaningful
+                images through photography.
+            </p>
+
+            <p>
+                My goal is to turn every moment into a memorable
+                photograph.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+
+        <h2>Contact Me</h2>
+
+        <p>📸 SN Photography</p>
+
+        <p>
+            Email:
+            <a href="mailto:your@email.com">
+                your@email.com
+            </a>
+        </p>
+
+        <p>
+            Facebook:
+            <a href="#">
+                SN Photography
+            </a>
+        </p>
+
+        <p>
+            Telegram:
+            <a href="#">
+                Contact Me
+            </a>
+        </p>
+
+    </section>
+
     <!-- LIGHTBOX -->
     <div class="lightbox" id="lightbox">
 
@@ -236,7 +316,6 @@
         © 2026 SN Photography
     </footer>
 
-    <!-- JAVASCRIPT -->
     <script>
 
         function openImage(image) {
