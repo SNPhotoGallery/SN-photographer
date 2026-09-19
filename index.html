@@ -24,6 +24,30 @@
             color: white;
         }
 
+        /* NAVIGATION */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.92);
+            padding: 18px 20px;
+            text-align: center;
+            backdrop-filter: blur(8px);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #aaa;
+        }
+
         /* TOP PHOTOS */
         .hero-images {
             display: grid;
@@ -38,7 +62,7 @@
             display: block;
         }
 
-        /* HEADER */
+        /* HOME */
         header {
             text-align: center;
             padding: 90px 20px;
@@ -119,6 +143,7 @@
 
         .about-box p {
             font-size: 18px;
+            margin-bottom: 15px;
         }
 
         /* CONTACT */
@@ -133,10 +158,6 @@
         .contact a {
             color: white;
             text-decoration: none;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
         }
 
         /* LIGHTBOX */
@@ -181,6 +202,11 @@
         /* PHONE */
         @media (max-width: 700px) {
 
+            nav a {
+                margin: 0 7px;
+                font-size: 12px;
+            }
+
             .hero-images {
                 grid-template-columns: 1fr;
             }
@@ -206,6 +232,14 @@
 
 <body>
 
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#gallery">MY WORK</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
     <!-- TOP PHOTOS -->
     <div class="hero-images">
         <img src="IMG_1828.JPG" alt="SN Photography">
@@ -213,7 +247,8 @@
     </div>
 
     <!-- HOME -->
-    <header>
+    <header id="home">
+
         <h1>SN Photography</h1>
 
         <p>
@@ -223,6 +258,7 @@
         <a href="#gallery" class="button">
             View My Work
         </a>
+
     </header>
 
     <!-- MY WORK -->
@@ -248,7 +284,7 @@
 
     </section>
 
-    <!-- ABOUT ME -->
+    <!-- ABOUT -->
     <section class="section" id="about">
 
         <div class="about-box">
