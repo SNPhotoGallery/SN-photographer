@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>SN Photography</title>
-<meta name="google-site-verification" content="9vtWA-qgsfGSgi23EnL3oAzzyBKsKOR9DMyEyQtIYLs" />
+
+    <meta name="google-site-verification" content="9vtWA-qgsfGSgi23EnL3oAzzyBKsKOR9DMyEyQtIYLs" />
+
     <style>
         * {
             box-sizing: border-box;
@@ -24,7 +25,6 @@
             color: white;
         }
 
-        /* NAVIGATION */
         nav {
             position: sticky;
             top: 0;
@@ -41,83 +41,53 @@
             margin: 0 15px;
             font-size: 14px;
             letter-spacing: 1px;
-            transition: 0.3s;
         }
 
-        nav a:hover {
+        .hero-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px;
+            background: #000;
+        }
+
+        .hero-images img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.78);
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(to bottom, #111 0%, #151515 100%);
+        }
+
+        h1 {
+            font-size: 58px;
+            letter-spacing: 4px;
+            margin-bottom: 18px;
+        }
+
+        header p {
             color: #aaa;
+            font-size: 18px;
+            letter-spacing: 2px;
         }
 
-        /* TOP PHOTOS */
-.hero-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3px;
-    background: #000;
-}
+        .button {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 15px 38px;
+            border: 1px solid #fff;
+            border-radius: 40px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
 
-.hero-images img {
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    display: block;
-    filter: brightness(0.78);
-    transition: transform 0.6s ease, filter 0.6s ease;
-}
-
-.hero-images img:hover {
-    transform: scale(1.02);
-    filter: brightness(0.95);
-}
-
-        /* HOME */
-       header {
-    text-align: center;
-   padding: 100px 20px;
-    background: linear-gradient(
-        to bottom,
-        #111 0%,
-        #151515 100%
-    );
-}
-
-h1 {
-    font-size: 58px;
-    letter-spacing: 4px;
-    margin-bottom: 18px;
-    font-weight: 700;
-    text-shadow: 0 5px 20px rgba(0,0,0,0.5);
-}
-
-header p {
-    color: #aaa;
-    font-size: 18px;
-    letter-spacing: 2px;
-}
-
-        /* BUTTON */
-       .button {
-    display: inline-block;
-    margin-top: 35px;
-    padding: 15px 38px;
-    border: 1px solid #fff;
-    border-radius: 40px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 2px;
-    transition: all 0.4s ease;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-}
-
-.button:hover {
-    background: #fff;
-    color: #111;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(255,255,255,0.15);
-}
-
-        /* SECTIONS */
         .section {
             text-align: center;
             padding: 80px 20px;
@@ -133,34 +103,43 @@ header p {
             line-height: 1.8;
         }
 
-        /* GALLERY */
-     .gallery {
-max-width: 1200px;
-margin: 50px auto 0;
-padding: 0 20px;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 30px;
-}
+        .gallery {
+            max-width: 1200px;
+            margin: 50px auto 0;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
 
-.gallery img {
-width: 100%;
-height: 420px;
-object-fit: cover;
-border-radius: 16px;
-cursor: pointer;
-transition: transform 0.4s ease, opacity 0.4s ease;
-box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-}
+        .gallery img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 16px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+        }
 
-.gallery img:hover {
-transform: scale(1.04);
-opacity: 0.92;
-box-shadow: 0 15px 40px rgba(0,0,0,0.65);
-}
+        .filter-buttons {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
 
+        .filter-buttons button {
+            padding: 10px 22px;
+            border: 1px solid #555;
+            background: transparent;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
 
-        /* ABOUT */
         .about-box {
             max-width: 800px;
             margin: auto;
@@ -171,7 +150,6 @@ box-shadow: 0 15px 40px rgba(0,0,0,0.65);
             margin-bottom: 15px;
         }
 
-        /* CONTACT */
         .contact {
             background: #181818;
         }
@@ -185,7 +163,6 @@ box-shadow: 0 15px 40px rgba(0,0,0,0.65);
             text-decoration: none;
         }
 
-        /* LIGHTBOX */
         .lightbox {
             display: none;
             position: fixed;
@@ -204,7 +181,6 @@ box-shadow: 0 15px 40px rgba(0,0,0,0.65);
             max-width: 95%;
             max-height: 90%;
             object-fit: contain;
-            border-radius: 8px;
         }
 
         .close {
@@ -216,7 +192,6 @@ box-shadow: 0 15px 40px rgba(0,0,0,0.65);
             cursor: pointer;
         }
 
-        /* FOOTER */
         footer {
             text-align: center;
             padding: 40px;
@@ -224,9 +199,7 @@ box-shadow: 0 15px 40px rgba(0,0,0,0.65);
             color: #777;
         }
 
-        /* PHONE */
         @media (max-width: 700px) {
-
             nav a {
                 margin: 0 7px;
                 font-size: 12px;
@@ -252,40 +225,11 @@ box-shadow: 0 15px 40px rgba(0,0,0,0.65);
                 height: 400px;
             }
         }
-  /* GALLERY FILTER BUTTONS */
-.filter-buttons {
-    margin: 30px 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.filter-buttons button {
-    padding: 10px 22px;
-    border: 1px solid #555;
-    background: transparent;
-    color: white;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 13px;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
-}
-
-.filter-buttons button:hover {
-    background: white;
-    color: #111;
-    border-color: white;
-}
-</style>
-</head>      
     </style>
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
     <nav>
         <a href="#home">HOME</a>
         <a href="#gallery">MY WORK</a>
@@ -293,89 +237,75 @@ box-shadow: 0 15px 40px rgba(0,0,0,0.65);
         <a href="#contact">CONTACT</a>
     </nav>
 
-    <!-- TOP PHOTOS -->
     <div class="hero-images">
         <img src="IMG_1828.JPG" alt="SN Photography">
         <img src="IMG_1830.JPG" alt="SN Photography">
     </div>
 
-    <!-- HOME -->
     <header id="home">
-
         <h1>SN Photography</h1>
-
-        <p>
-            Photography • Photo Editing • Creative Work
-        </p>
+        <p>Photography • Photo Editing • Creative Work</p>
 
         <a href="#gallery" class="button">
             View My Work
         </a>
-
     </header>
 
-    <!-- MY WORK -->
     <section class="section" id="gallery">
 
         <h2>My Work</h2>
 
-        <p>
-            Beautiful moments captured through my camera.
-            
-   <div class="filter-buttons">
-    <button onclick="filterGallery('all')">ALL</button>
-    <button onclick="filterGallery('portrait')">PORTRAIT</button>
-    <button onclick="filterGallery('nature')">NATURE</button>
-    <button onclick="filterGallery('event')">EVENT</button>
-    <button onclick="filterGallery('indoor')">INDOOR</button>
-    <button onclick="filterGallery('outdoor')">OUTDOOR</button>
-</div>
+        <p>Beautiful moments captured through my camera.</p>
 
-        </p>
-
-
-<div class="gallery">
-
-    <img src="IMG_1828.JPG"
-    class="gallery-item portrait outdoor"  
-        alt="SN Photography"
-         onclick="openImage(this.src)">
-
-    <img src="IMG_1830.JPG"
-    class="gallery-item event outdoor"   
-        alt="SN Photography"
-         onclick="openImage(this.src)">
-
-    <img src="sn11.jpg"
-     class="gallery-item nature outdoor"   
-        alt="SN Photography"
-         onclick="openImage(this.src)">
-
-    <img src="sn12.jpg"
-     class="gallery-item nature outdoor"    
-        alt="SN Photography"
-         onclick="openImage(this.src)">
-
-    <img src="sn13.jpg"
-    class="gallery-item nature outdoor"     
-        alt="SN Photography"
-         onclick="openImage(this.src)">
-
-    <img src="sn14.jpg"
-    class="gallery-item nature outdoor"     
-        alt="SN Photography"
-         onclick="openImage(this.src)">
-
-    <img src="sn15.jpg"
-    class="gallery-item nature outdoor"    
-        alt="SN Photography"
-         onclick="openImage(this.src)">
-
+        <div class="filter-buttons">
+            <button onclick="filterGallery('all')">ALL</button>
+            <button onclick="filterGallery('portrait')">PORTRAIT</button>
+            <button onclick="filterGallery('nature')">NATURE</button>
+            <button onclick="filterGallery('event')">EVENT</button>
+            <button onclick="filterGallery('indoor')">INDOOR</button>
+            <button onclick="filterGallery('outdoor')">OUTDOOR</button>
         </div>
 
+        <div class="gallery">
+
+            <img src="IMG_1828.JPG"
+                 class="gallery-item portrait outdoor"
+                 alt="SN Photography"
+                 onclick="openImage(this.src)">
+
+            <img src="IMG_1830.JPG"
+                 class="gallery-item event outdoor"
+                 alt="SN Photography"
+                 onclick="openImage(this.src)">
+
+            <img src="sn11.jpg"
+                 class="gallery-item nature outdoor"
+                 alt="SN Photography"
+                 onclick="openImage(this.src)">
+
+            <img src="sn12.jpg"
+                 class="gallery-item nature outdoor"
+                 alt="SN Photography"
+                 onclick="openImage(this.src)">
+
+            <img src="sn13.jpg"
+                 class="gallery-item nature outdoor"
+                 alt="SN Photography"
+                 onclick="openImage(this.src)">
+
+            <img src="sn14.jpg"
+                 class="gallery-item nature outdoor"
+                 alt="SN Photography"
+                 onclick="openImage(this.src)">
+
+            <img src="sn15.jpg"
+                 class="gallery-item nature outdoor"
+                 alt="SN Photography"
+                 onclick="openImage(this.src)">
+
+        </div>
     </section>
 
-    <!-- ABOUT -->
     <section class="section" id="about">
 
         <div class="about-box">
@@ -397,7 +327,6 @@ box-shadow: 0 15px 40px rgba(0,0,0,0.65);
 
     </section>
 
-    <!-- CONTACT -->
     <section class="section contact" id="contact">
 
         <h2>Contact Me</h2>
@@ -406,39 +335,29 @@ box-shadow: 0 15px 40px rgba(0,0,0,0.65);
 
         <p>
             Email:
-            <a href="mailto:your@email.com">
-                your@email.com
-            </a>
+            <a href="mailto:your@email.com">your@email.com</a>
         </p>
 
         <p>
             Facebook:
-            <a href="#">
-                SN Photography
-            </a>
+            <a href="#">SN Photography</a>
         </p>
 
         <p>
             Telegram:
-            <a href="#">
-                Contact Me
-            </a>
+            <a href="#">Contact Me</a>
         </p>
 
     </section>
 
-    <!-- LIGHTBOX -->
     <div class="lightbox" id="lightbox">
 
-        <span class="close" onclick="closeImage()">
-            &times;
-        </span>
+        <span class="close" onclick="closeImage()">&times;</span>
 
         <img id="bigImage" src="" alt="SN Photography">
 
     </div>
 
-    <!-- FOOTER -->
     <footer>
         © 2026 SN Photography
     </footer>
@@ -452,31 +371,28 @@ box-shadow: 0 15px 40px rgba(0,0,0,0.65);
 
         function closeImage() {
             document.getElementById("lightbox").style.display = "none";
-        }<script>
+        }
 
-    function openImage(image) {
-        document.getElementById("lightbox").style.display = "flex";
-        document.getElementById("bigImage").src = image;
-    }
+        function filterGallery(category) {
+            const images = document.querySelectorAll(".gallery img");
 
-    function closeImage() {
-        document.getElementById("lightbox").style.display = "none";
-    }
+            images.forEach(image => {
 
-    function filterGallery(category) {
-        const images = document.querySelectorAll(".gallery img");
+                if (category === "all" ||
+                    image.classList.contains(category)) {
 
-        images.forEach(image => {
-            if (category === "all" || image.classList.contains(category)) {
-                image.style.display = "block";
-            } else {
-                image.style.display = "none";
-            }
-        });
-    }
+                    image.style.display = "block";
 
-</script>
+                } else {
+
+                    image.style.display = "none";
+
+                }
+
+            });
+        }
+
+    </script>
 
 </body>
 </html>
-
