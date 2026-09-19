@@ -321,11 +321,14 @@ box-shadow: 0 15px 40px rgba(0,0,0,0.65);
 
         <p>
             Beautiful moments captured through my camera.
-            <div class="filter-buttons">
+            
+   <div class="filter-buttons">
     <button onclick="filterGallery('all')">ALL</button>
     <button onclick="filterGallery('portrait')">PORTRAIT</button>
     <button onclick="filterGallery('nature')">NATURE</button>
     <button onclick="filterGallery('event')">EVENT</button>
+    <button onclick="filterGallery('indoor')">INDOOR</button>
+    <button onclick="filterGallery('outdoor')">OUTDOOR</button>
 </div>
 
         </p>
@@ -334,31 +337,38 @@ box-shadow: 0 15px 40px rgba(0,0,0,0.65);
 <div class="gallery">
 
     <img src="IMG_1828.JPG"
-         alt="SN Photography"
+    class="gallery-item nature outdoor"    
+        alt="SN Photography"
          onclick="openImage(this.src)">
 
     <img src="IMG_1830.JPG"
-         alt="SN Photography"
+    class="gallery-item portrait outdoor"     
+        alt="SN Photography"
          onclick="openImage(this.src)">
 
     <img src="sn11.jpg"
-         alt="SN Photography"
+     class="gallery-item nature outdoor"   
+        alt="SN Photography"
          onclick="openImage(this.src)">
 
     <img src="sn12.jpg"
-         alt="SN Photography"
+     class="gallery-item nature outdoor"    
+        alt="SN Photography"
          onclick="openImage(this.src)">
 
     <img src="sn13.jpg"
-         alt="SN Photography"
+    class="gallery-item nature outdoor"     
+        alt="SN Photography"
          onclick="openImage(this.src)">
 
     <img src="sn14.jpg"
-         alt="SN Photography"
+    class="gallery-item nature outdoor"     
+        alt="SN Photography"
          onclick="openImage(this.src)">
 
     <img src="sn15.jpg"
-         alt="SN Photography"
+    class="gallery-item nature outdoor"    
+        alt="SN Photography"
          onclick="openImage(this.src)">
 
         </div>
@@ -442,7 +452,33 @@ box-shadow: 0 15px 40px rgba(0,0,0,0.65);
 
         function closeImage() {
             document.getElementById("lightbox").style.display = "none";
-        }
+        }<script>
+
+    function openImage(image) {
+        document.getElementById("lightbox").style.display = "flex";
+        document.getElementById("bigImage").src = image;
+    }
+
+    function closeImage() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+
+    function filterGallery(category) {
+        const images = document.querySelectorAll(".gallery img");
+
+        images.forEach(image => {
+            if (category === "all" || image.classList.contains(category)) {
+                image.style.display = "block";
+            } else {
+                image.style.display = "none";
+            }
+        });
+    }
+
+</script>
+
+</body>
+</html>
 
     </script>
 
