@@ -183,14 +183,24 @@
             object-fit: contain;
         }
 
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            font-size: 45px;
-            color: white;
-            cursor: pointer;
-        }
+       .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
 
         footer {
             text-align: center;
