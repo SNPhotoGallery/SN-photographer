@@ -217,14 +217,16 @@
                 font-size: 38px;
             }
 
-            .gallery {
-                grid-template-columns: 1fr;
-            }
+          .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0 8px;
+}
 
-            .gallery img {
-                height: 400px;
-            }
-        }
+.gallery img {
+    height: 180px;
+    border-radius: 8px;
+}
     </style>
 </head>
 
