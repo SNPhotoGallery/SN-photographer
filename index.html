@@ -232,11 +232,13 @@
     gap: 8px;
     padding: 0 8px;
 }
-
 .gallery img {
     height: 180px;
     border-radius: 8px;
 }
+
+}
+
     </style>
 </head>
 
@@ -429,7 +431,24 @@ function changeImage(direction) {
 
             });
         }
+let touchStartX = 0;
+let touchEndX = 0;
 
+document.getElementById("bigImage").addEventListener("touchstart", function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+document.getElementById("bigImage").addEventListener("touchend", function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+
+    if (touchEndX < touchStartX - 50) {
+        changeImage(1);
+    }
+
+    if (touchEndX > touchStartX + 50) {
+        changeImage(-1);
+    }
+});
     </script>
 
 </body>
