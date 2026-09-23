@@ -385,9 +385,23 @@
             document.getElementById("bigImage").src = image;
         }
 
-        function closeImage() {
-            document.getElementById("lightbox").style.display = "none";
-        }
+     let currentImage = 0;
+
+function changeImage(direction) {
+    const images = document.querySelectorAll(".gallery img");
+
+    currentImage += direction;
+
+    if (currentImage >= images.length) {
+        currentImage = 0;
+    }
+
+    if (currentImage < 0) {
+        currentImage = images.length - 1;
+    }
+
+    document.getElementById("bigImage").src = images[currentImage].src;
+}
 
         function filterGallery(category) {
             const images = document.querySelectorAll(".gallery img");
