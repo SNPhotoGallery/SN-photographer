@@ -380,10 +380,18 @@
 
     <script>
 
-        function openImage(image) {
-            document.getElementById("lightbox").style.display = "flex";
-            document.getElementById("bigImage").src = image;
+      function openImage(image) {
+    const images = document.querySelectorAll(".gallery img");
+
+    images.forEach((img, index) => {
+        if (img.src === image) {
+            currentImage = index;
         }
+    });
+
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("bigImage").src = image;
+}
 
      let currentImage = 0;
 
