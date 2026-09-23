@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SN Photography</title>
+<title>SN Photography</title>
 
-    <meta name="google-site-verification" content="9vtWA-qgsfGSgi23EnL3oAzzyBKsKOR9DMyEyQtIYLs" />
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #111;
-            color: white;
-        }
+/* NAV */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(0,0,0,0.92);
+    padding: 18px 20px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
 
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(0, 0, 0, 0.92);
-            padding: 18px 20px;
-            text-align: center;
-            backdrop-filter: blur(8px);
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
+/* HERO IMAGES */
 .hero-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -55,129 +56,147 @@
     object-fit: cover;
     display: block;
     filter: brightness(0.65);
-    transition: transform 0.5s ease;
 }
 
-        h1 {
-            font-size: 58px;
-            letter-spacing: 4px;
-            margin-bottom: 18px;
-        }
+/* HOME */
+header {
+    text-align: center;
+    padding: 80px 20px;
+}
 
-        header p {
-            color: #aaa;
-            font-size: 18px;
-            letter-spacing: 2px;
-        }
+h1 {
+    font-size: 58px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
 
-        .button {
-            display: inline-block;
-            margin-top: 35px;
-            padding: 15px 38px;
-            border: 1px solid #fff;
-            border-radius: 40px;
-            color: #fff;
-            text-decoration: none;
-            font-size: 14px;
-            letter-spacing: 2px;
-        }
+header p {
+    color: #aaa;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
 
-        .section {
-            text-align: center;
-            padding: 80px 20px;
-        }
+.button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 38px;
+    border: 1px solid white;
+    border-radius: 40px;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
 
-        .section h2 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
+/* SECTION */
+.section {
+    text-align: center;
+    padding: 80px 20px;
+}
 
-        .section p {
-            color: #aaa;
-            line-height: 1.8;
-        }
+.section h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
 
-        .gallery {
-            max-width: 1200px;
-            margin: 50px auto 0;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
+.section p {
+    color: #aaa;
+    line-height: 1.8;
+}
 
-        .gallery img {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-            border-radius: 16px;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-        }
+/* FILTER */
+.filter-buttons {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
 
-        .filter-buttons {
-            margin: 30px 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+.filter-buttons button {
+    padding: 10px 22px;
+    border: 1px solid #555;
+    background: transparent;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
 
-        .filter-buttons button {
-            padding: 10px 22px;
-            border: 1px solid #555;
-            background: transparent;
-            color: white;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 13px;
-            letter-spacing: 1px;
-        }
+/* GALLERY */
+.gallery {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
 
-        .about-box {
-            max-width: 800px;
-            margin: auto;
-        }
+.gallery img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
 
-        .about-box p {
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
+/* ABOUT */
+.about-box {
+    max-width: 800px;
+    margin: auto;
+}
 
-        .contact {
-            background: #181818;
-        }
+.about-box p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
 
-        .contact p {
-            margin: 12px 0;
-        }
+/* CONTACT */
+.contact {
+    background: #181818;
+}
 
-        .contact a {
-            color: white;
-            text-decoration: none;
-        }
+.contact p {
+    margin: 12px 0;
+}
 
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            justify-content: center;
-            align-items: center;
-            padding: 30px;
-        }
+.contact a {
+    color: white;
+    text-decoration: none;
+}
 
-        .lightbox img {
-            max-width: 95%;
-            max-height: 90%;
-            object-fit: contain;
-        }
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.96);
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
 
-       .prev, .next {
+.lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+}
+
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -189,176 +208,182 @@
 }
 
 .prev {
-    left: 10px;
+    left: 5px;
 }
 
 .next {
-    right: 10px;
+    right: 5px;
 }
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: #050505;
-            color: #777;
-        }
-
-        @media (max-width: 700px) {
-            nav a {
-                margin: 0 7px;
-                font-size: 12px;
-            }
-
-            .hero-images {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-images img {
-                height: 350px;
-            }
-
-            h1 {
-                font-size: 38px;
-            }
-
-          .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    padding: 0 8px;
-}
-.gallery img {
-    height: 180px;
-    border-radius: 8px;
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #050505;
+    color: #777;
 }
 
-}
+/* MOBILE */
+@media (max-width: 700px) {
 
-    </style>
+    nav a {
+        margin: 0 7px;
+        font-size: 12px;
+    }
+
+    .hero-images {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-images img {
+        height: 350px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 0 8px;
+    }
+
+    .gallery img {
+        height: 180px;
+        border-radius: 8px;
+    }
+
+    .prev,
+    .next {
+        font-size: 35px;
+        padding: 10px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <nav>
-        <a href="#home">HOME</a>
-        <a href="#gallery">MY WORK</a>
-        <a href="#about">ABOUT</a>
-        <a href="#contact">CONTACT</a>
-    </nav>
+<nav>
+    <a href="#home">HOME</a>
+    <a href="#gallery">MY WORK</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+</nav>
 
-    <div class="hero-images">
-        <img src="IMG_1828.JPG" alt="SN Photography">
-        <img src="IMG_1830.JPG" alt="SN Photography">
+<!-- HERO -->
+<div class="hero-images">
+    <img src="IMG_1828.JPG" alt="SN Photography">
+    <img src="IMG_1830.JPG" alt="SN Photography">
+</div>
+
+<header id="home">
+    <h1>SN Photography</h1>
+    <p>Photography • Photo Editing • Creative Work</p>
+
+    <a href="#gallery" class="button">
+        View My Work
+    </a>
+</header>
+
+<!-- GALLERY -->
+<section class="section" id="gallery">
+
+    <h2>My Work</h2>
+
+    <p>Beautiful moments captured through my camera.</p>
+
+    <div class="filter-buttons">
+        <button onclick="filterGallery('all')">ALL</button>
+        <button onclick="filterGallery('portrait')">PORTRAIT</button>
+        <button onclick="filterGallery('nature')">NATURE</button>
+        <button onclick="filterGallery('event')">EVENT</button>
+        <button onclick="filterGallery('indoor')">INDOOR</button>
+        <button onclick="filterGallery('outdoor')">OUTDOOR</button>
     </div>
 
-    <header id="home">
-        <h1>SN Photography</h1>
-        <p>Photography • Photo Editing • Creative Work</p>
+    <div class="gallery">
 
-        <a href="#gallery" class="button">
-            View My Work
-        </a>
-    </header>
+        <img src="IMG_1828.JPG"
+             class="gallery-item portrait outdoor"
+             onclick="openImage(0)">
 
-    <section class="section" id="gallery">
+        <img src="IMG_1830.JPG"
+             class="gallery-item event outdoor"
+             onclick="openImage(1)">
 
-        <h2>My Work</h2>
+        <img src="sn11.jpg"
+             class="gallery-item nature outdoor"
+             onclick="openImage(2)">
 
-        <p>Beautiful moments captured through my camera.</p>
+        <img src="sn12.jpg"
+             class="gallery-item nature outdoor"
+             onclick="openImage(3)">
 
-        <div class="filter-buttons">
-            <button onclick="filterGallery('all')">ALL</button>
-            <button onclick="filterGallery('portrait')">PORTRAIT</button>
-            <button onclick="filterGallery('nature')">NATURE</button>
-            <button onclick="filterGallery('event')">EVENT</button>
-            <button onclick="filterGallery('indoor')">INDOOR</button>
-            <button onclick="filterGallery('outdoor')">OUTDOOR</button>
-        </div>
+        <img src="sn13.jpg"
+             class="gallery-item nature outdoor"
+             onclick="openImage(4)">
 
-        <div class="gallery">
+        <img src="sn14.jpg"
+             class="gallery-item nature outdoor"
+             onclick="openImage(5)">
 
-            <img src="IMG_1828.JPG"
-                 class="gallery-item portrait outdoor"
-                 alt="SN Photography"
-                 onclick="openImage(this.src)">
+        <img src="sn15.jpg"
+             class="gallery-item nature outdoor"
+             onclick="openImage(6)">
 
-            <img src="IMG_1830.JPG"
-                 class="gallery-item event outdoor"
-                 alt="SN Photography"
-                 onclick="openImage(this.src)">
+    </div>
+</section>
 
-            <img src="sn11.jpg"
-                 class="gallery-item nature outdoor"
-                 alt="SN Photography"
-                 onclick="openImage(this.src)">
+<!-- ABOUT -->
+<section class="section" id="about">
 
-            <img src="sn12.jpg"
-                 class="gallery-item nature outdoor"
-                 alt="SN Photography"
-                 onclick="openImage(this.src)">
+    <div class="about-box">
 
-            <img src="sn13.jpg"
-                 class="gallery-item nature outdoor"
-                 alt="SN Photography"
-                 onclick="openImage(this.src)">
-
-            <img src="sn14.jpg"
-                 class="gallery-item nature outdoor"
-                 alt="SN Photography"
-                 onclick="openImage(this.src)">
-
-            <img src="sn15.jpg"
-                 class="gallery-item nature outdoor"
-                 alt="SN Photography"
-                 onclick="openImage(this.src)">
-
-        </div>
-    </section>
-
-    <section class="section" id="about">
-
-        <div class="about-box">
-
-            <h2>About Me</h2>
-
-            <p>
-                I am a photographer and photo editor who loves
-                capturing beautiful moments and creating meaningful
-                images through photography.
-            </p>
-
-            <p>
-                My goal is to turn every moment into a memorable
-                photograph.
-            </p>
-
-        </div>
-
-    </section>
-
-    <section class="section contact" id="contact">
-
-        <h2>Contact Me</h2>
-
-        <p>📸 SN Photography</p>
+        <h2>About Me</h2>
 
         <p>
-            Email:
-            <a href="mailto:your@email.com">your@email.com</a>
+            I am a photographer and photo editor who loves
+            capturing beautiful moments and creating meaningful
+            images through photography.
         </p>
 
         <p>
-            Facebook:
-            <a href="#">SN Photography</a>
+            My goal is to turn every moment into a memorable
+            photograph.
         </p>
 
-        <p>
-            Telegram:
-            <a href="#">Contact Me</a>
-        </p>
+    </div>
 
-    </section>
+</section>
 
-   <div class="lightbox" id="lightbox">
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+
+    <h2>Contact Me</h2>
+
+    <p>📸 SN Photography</p>
+
+    <p>
+        Email:
+        <a href="mailto:your@email.com">your@email.com</a>
+    </p>
+
+    <p>
+        Facebook:
+        <a href="#">SN Photography</a>
+    </p>
+
+    <p>
+        Telegram:
+        <a href="#">Contact Me</a>
+    </p>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
 
     <span class="close" onclick="closeImage()">&times;</span>
 
@@ -370,84 +395,88 @@
 
 </div>
 
-    <footer>
-        © 2026 SN Photography
-    </footer>
+<footer>
+    © 2026 SN Photography
+</footer>
 
-    <script>
+<script>
 
-  function closeImage() {
+const galleryImages = [
+    "IMG_1828.JPG",
+    "IMG_1830.JPG",
+    "sn11.jpg",
+    "sn12.jpg",
+    "sn13.jpg",
+    "sn14.jpg",
+    "sn15.jpg"
+];
+
+let currentImage = 0;
+
+function openImage(index) {
+    currentImage = index;
+
+    document.getElementById("bigImage").src =
+        galleryImages[currentImage];
+
+    document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeImage() {
     document.getElementById("lightbox").style.display = "none";
 }
 
-function openImage(image) {
-    const images = document.querySelectorAll(".gallery img");
-
-    images.forEach((img, index) => {
-        if (img.src === image) {
-            currentImage = index;
-        }
-    });
-
-    document.getElementById("lightbox").style.display = "flex";
-    document.getElementById("bigImage").src = image;
-}
-
-let currentImage = 0;
-        if (img.src === image) {
-            currentImage = index;
-        }
-    });
-
-    document.getElementById("lightbox").style.display = "flex";
-    document.getElementById("bigImage").src = image;
-}
-
-     let currentImage = 0;
-
 function changeImage(direction) {
-    const images = document.querySelectorAll(".gallery img");
 
     currentImage += direction;
 
-    if (currentImage >= images.length) {
+    if (currentImage >= galleryImages.length) {
         currentImage = 0;
     }
 
     if (currentImage < 0) {
-        currentImage = images.length - 1;
+        currentImage = galleryImages.length - 1;
     }
 
-    document.getElementById("bigImage").src = images[currentImage].src;
+    document.getElementById("bigImage").src =
+        galleryImages[currentImage];
 }
 
-        function filterGallery(category) {
-            const images = document.querySelectorAll(".gallery img");
+function filterGallery(category) {
 
-            images.forEach(image => {
+    const images =
+        document.querySelectorAll(".gallery img");
 
-                if (category === "all" ||
-                    image.classList.contains(category)) {
+    images.forEach(image => {
 
-                    image.style.display = "block";
-
-                } else {
-
-                    image.style.display = "none";
-
-                }
-
-            });
+        if (
+            category === "all" ||
+            image.classList.contains(category)
+        ) {
+            image.style.display = "block";
+        } else {
+            image.style.display = "none";
         }
-let touchStartX = 0;
-let touchEndX = 0;
 
-document.getElementById("bigImage").addEventListener("touchstart", function(e) {
-    touchStartX = e.changedTouches[0].screenX;
+    });
+}
+
+/* SWIPE */
+let touchStartX = 0;
+
+document.getElementById("bigImage")
+.addEventListener("touchstart", function(e) {
+
+    touchStartX =
+        e.changedTouches[0].screenX;
+
 });
 
-document.getElementById("bigImage").addEventListener("touchend", function(e) {
-    touchEndX = e.changedTouches[0].screenX;
+document.getElementById("bigImage")
+.addEventListener("touchend", function(e) {
+
+    const touchEndX =
+        e.changedTouches[0].screenX;
 
     if (touchEndX < touchStartX - 50) {
         changeImage(1);
@@ -456,8 +485,10 @@ document.getElementById("bigImage").addEventListener("touchend", function(e) {
     if (touchEndX > touchStartX + 50) {
         changeImage(-1);
     }
+
 });
-    </script>
+
+</script>
 
 </body>
 </html>
