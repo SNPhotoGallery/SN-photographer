@@ -42,27 +42,21 @@
             font-size: 14px;
             letter-spacing: 1px;
         }
+.hero-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    background: #000;
+}
 
-        .hero-images {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3px;
-            background: #000;
-        }
-
-        .hero-images img {
-            width: 100%;
-            height: 600px;
-            object-fit: cover;
-            display: block;
-            filter: brightness(0.78);
-        }
-
-        header {
-            text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(to bottom, #111 0%, #151515 100%);
-        }
+.hero-images img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.65);
+    transition: transform 0.5s ease;
+}
 
         h1 {
             font-size: 58px;
