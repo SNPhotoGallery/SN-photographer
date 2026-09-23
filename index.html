@@ -376,8 +376,9 @@
 
     <script>
 
-      function openImage(image) {
-    const images = document.querySelectorAll(".gallery img");
+    function closeImage() {
+    document.getElementById("lightbox").style.display = "none";
+}
 
     images.forEach((img, index) => {
         if (img.src === image) {
