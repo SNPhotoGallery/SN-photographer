@@ -376,11 +376,24 @@
 
     <script>
 
-    function closeImage() {
+  function closeImage() {
     document.getElementById("lightbox").style.display = "none";
 }
 
+function openImage(image) {
+    const images = document.querySelectorAll(".gallery img");
+
     images.forEach((img, index) => {
+        if (img.src === image) {
+            currentImage = index;
+        }
+    });
+
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("bigImage").src = image;
+}
+
+let currentImage = 0;
         if (img.src === image) {
             currentImage = index;
         }
