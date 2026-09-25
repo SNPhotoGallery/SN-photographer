@@ -379,6 +379,45 @@ header p {
 .gallery img:hover {
     opacity: 0.75;
 }
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.gallery-card img {
+    width: 100%;
+    display: block;
+}
+
+.gallery-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    text-align: left;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.gallery-card:hover .gallery-info {
+    opacity: 1;
+}
+
+.gallery-info h3 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.gallery-info p {
+    color: #ccc;
+    font-size: 13px;
+}
 </style>
 </head>
 
@@ -433,9 +472,16 @@ header p {
 
     <div class="gallery">
 
-        <img src="IMG_1828.JPG"
-             class="gallery-item portrait outdoor"
-             onclick="openImage(0)">
+       <div class="gallery-card">
+    <img src="IMG_1828.JPG"
+         class="gallery-item portrait outdoor"
+         onclick="openImage(0)">
+
+    <div class="gallery-info">
+        <h3>PORTRAIT</h3>
+        <p>Outdoor Photography</p>
+    </div>
+</div>
 
         <img src="IMG_1830.JPG"
              class="gallery-item event outdoor"
