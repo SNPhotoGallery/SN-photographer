@@ -687,15 +687,11 @@ async function loadGallery() {
 
         const files = await response.json();
 
-        galleryImages = files
-            .filter(file =>
-                /\.(jpg|jpeg|png|webp)$/i.test(file.name)
-            )
-            .filter(file =>
-                file.name !== "IMG_1828.JPG" &&
-                file.name !== "IMG_1830.JPG"
-            )
-            .map(file => file.name);
+galleryImages = files
+    .filter(file =>
+        /\.(jpg|jpeg|png|webp)$/i.test(file.name)
+    )
+    .map(file => file.name);
 
         gallery.innerHTML = "";
 
