@@ -702,19 +702,13 @@ galleryImages = files
             const card =
                 document.createElement("div");
 
-            card.className = "gallery-card";
+          card.className = "gallery-card";
 
-            card.innerHTML = `
-                <img src="${image}"
-
-class="gallery-item nature outdoor"
-
-                <div class="gallery-info">
-                    <h3>PHOTOGRAPHY</h3>
-                    <p>SN Photography</p>
-                </div>
-            `;
-
+card.innerHTML = `
+    <img src="${image}"
+         class="gallery-item nature outdoor"
+         onclick="openImage(${index})">
+`;
             gallery.appendChild(card);
 
         });
