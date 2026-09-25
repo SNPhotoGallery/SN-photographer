@@ -689,9 +689,10 @@ async function loadGallery() {
 
 galleryImages = files
     .filter(file =>
+        file.type === "file" &&
         /\.(jpg|jpeg|png|webp)$/i.test(file.name)
     )
-    .map(file => file.name);
+    .map(file => file.download_url);
 
         gallery.innerHTML = "";
 
