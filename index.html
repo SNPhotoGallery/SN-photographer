@@ -484,8 +484,14 @@ header p {
     background: linear-gradient(transparent, rgba(0,0,0,0.85));
     color: white;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
     pointer-events: none;
+}
+
+.gallery-card:hover .gallery-info {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .gallery-card:hover .gallery-info {
