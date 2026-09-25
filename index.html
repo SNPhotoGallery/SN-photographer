@@ -553,7 +553,8 @@ header p {
         <button onclick="filterGallery('indoor')">INDOOR</button>
         <button onclick="filterGallery('outdoor')">OUTDOOR</button>
     </div>
-<div class="gallery">
+<div class="gallery" id="galleryGrid">
+</div>
 
     <div class="gallery-card">
         <img src="IMG_1828.JPG"
@@ -748,30 +749,88 @@ header p {
 
 <script>
 
-const galleryImages = [
-    "IMG_1828.JPG",
-    "IMG_1830.JPG",
-    "sn11.jpg",
-    "sn12.jpg",
-    "sn13.jpg",
-    "sn14.jpg",
-    "sn15.jpg"
-];
+const owner = "SNPhotoGallery";
+const repo = "SN-photographer";
 
+let galleryImages = [];
 let currentImage = 0;
 
+/* AUTO GALLERY */
+async function loadGallery() {
+
+    const gallery =
+        document.getElementById("galleryGrid");
+
+    try {
+
+        const response = await fetch(
+            `https://api.github.com/repos/${owner}/${repo}/contents/`
+        );
+
+        const files = await response.json();
+
+        galleryImages = files
+            .filter(file =>
+                /\.(jpg|jpeg|png|webp)$/i.test(file.name)
+            )
+            .filter(file =>
+                file.name !== "IMG_1828.JPG" &&
+                file.name !== "IMG_1830.JPG"
+            )
+            .map(file => file.name);
+
+        gallery.innerHTML = "";
+
+        galleryImages.forEach((image, index) => {
+
+            const card =
+                document.createElement("div");
+
+            card.className = "gallery-card";
+
+            card.innerHTML = `
+                <img src="${image}"
+                     class="gallery-item nature outdoor"
+                     onclick="openImage(${index})">
+
+                <div class="gallery-info">
+                    <h3>PHOTOGRAPHY</h3>
+                    <p>SN Photography</p>
+                </div>
+            `;
+
+            gallery.appendChild(card);
+
+        });
+
+    } catch (error) {
+
+        console.log("Gallery loading error:", error);
+
+    }
+}
+
+
+/* LIGHTBOX */
+
 function openImage(index) {
+
     currentImage = index;
 
     document.getElementById("bigImage").src =
         galleryImages[currentImage];
 
-    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox").style.display =
+        "flex";
 }
 
+
 function closeImage() {
-    document.getElementById("lightbox").style.display = "none";
+
+    document.getElementById("lightbox").style.display =
+        "none";
 }
+
 
 function changeImage(direction) {
 
@@ -782,12 +841,16 @@ function changeImage(direction) {
     }
 
     if (currentImage < 0) {
-        currentImage = galleryImages.length - 1;
+        currentImage =
+            galleryImages.length - 1;
     }
 
     document.getElementById("bigImage").src =
         galleryImages[currentImage];
 }
+
+
+/* FILTER */
 
 function filterGallery(category) {
 
@@ -800,15 +863,22 @@ function filterGallery(category) {
             category === "all" ||
             image.classList.contains(category)
         ) {
+
             image.style.display = "block";
+
         } else {
+
             image.style.display = "none";
+
         }
 
     });
+
 }
 
+
 /* SWIPE */
+
 let touchStartX = 0;
 
 document.getElementById("bigImage")
@@ -819,6 +889,7 @@ document.getElementById("bigImage")
 
 });
 
+
 document.getElementById("bigImage")
 .addEventListener("touchend", function(e) {
 
@@ -826,14 +897,23 @@ document.getElementById("bigImage")
         e.changedTouches[0].screenX;
 
     if (touchEndX < touchStartX - 50) {
+
         changeImage(1);
+
     }
 
     if (touchEndX > touchStartX + 50) {
+
         changeImage(-1);
+
     }
 
 });
+
+
+/* START AUTO GALLERY */
+
+loadGallery();
 
 </script>
 
