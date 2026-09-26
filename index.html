@@ -623,7 +623,6 @@ function changeImage(direction) {
     document.getElementById("bigImage").src =
         galleryImages[currentImage];
 }
-
 function filterGallery(category) {
 
     const cards =
@@ -642,6 +641,8 @@ function filterGallery(category) {
 
     });
 }
+
+filterGallery("all");
 
 document.getElementById("lightbox")
 .addEventListener("click", function(e) {
