@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -48,7 +47,6 @@ nav a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3px;
- background: transparent;
 }
 
 .hero-photo {
@@ -113,13 +111,6 @@ header p {
     color: white;
     text-decoration: none;
     letter-spacing: 2px;
-    transition: all 0.3s ease;
-}
-
-.button:hover {
-    background: white;
-    color: #111;
-    transform: translateY(-4px);
 }
 
 /* SECTION */
@@ -131,7 +122,6 @@ header p {
 .section h2 {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 38px;
-    font-weight: 600;
     letter-spacing: 3px;
     margin-bottom: 15px;
 }
@@ -157,7 +147,6 @@ header p {
     color: white;
     border-radius: 30px;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 .filter-buttons button:hover {
@@ -187,13 +176,11 @@ header p {
     height: 400px;
     object-fit: cover;
     display: block;
-    transition: transform 0.4s ease, opacity 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    transition: transform 0.4s ease;
 }
 
 .gallery-card:hover img {
     transform: scale(1.05);
-    opacity: 0.8;
 }
 
 /* ABOUT */
@@ -215,7 +202,6 @@ header p {
     font-size: 42px;
     line-height: 1.3;
     margin-bottom: 25px;
-    letter-spacing: 2px;
 }
 
 .about-box p {
@@ -229,8 +215,6 @@ header p {
 /* CONTACT */
 .contact {
     background: #181818;
-    padding-top: 90px;
-    padding-bottom: 90px;
 }
 
 .contact-box {
@@ -253,18 +237,12 @@ header p {
 .contact h2 {
     font-size: 40px;
     margin-bottom: 18px;
-    letter-spacing: 3px;
 }
 
 .contact-intro {
     max-width: 520px;
     margin: 0 auto 30px;
     color: #999;
-    line-height: 1.8;
-}
-
-.contact-details {
-    padding-top: 10px;
 }
 
 .contact-details p {
@@ -274,16 +252,11 @@ header p {
 
 .contact-details strong {
     color: white;
-    letter-spacing: 1px;
 }
 
 .contact a {
     color: white;
     text-decoration: none;
-}
-
-.contact a:hover {
-    opacity: 0.6;
 }
 
 /* LIGHTBOX */
@@ -306,7 +279,6 @@ header p {
     max-width: 90%;
     max-height: 85vh;
     object-fit: contain;
-    border-radius: 8px;
 }
 
 .close {
@@ -327,7 +299,6 @@ header p {
     color: white;
     cursor: pointer;
     padding: 20px;
-    user-select: none;
 }
 
 .prev {
@@ -354,15 +325,8 @@ footer {
 }
 
 footer p {
-    color: #888;
     font-size: 13px;
-    letter-spacing: 1px;
     margin-bottom: 18px;
-}
-
-footer span {
-    font-size: 12px;
-    color: #555;
 }
 
 /* MOBILE */
@@ -397,13 +361,6 @@ footer span {
 
     .gallery-card img {
         height: 180px;
-        border-radius: 8px;
-    }
-
-    .prev,
-    .next {
-        font-size: 35px;
-        padding: 10px;
     }
 
     .about-box h2 {
@@ -415,12 +372,9 @@ footer span {
     }
 }
 </style>
-
 </head>
 
 <body>
-
-<!-- NAV -->
 
 <nav>
     <a href="#home">HOME</a>
@@ -430,239 +384,201 @@ footer span {
 </nav>
 
 <!-- HERO -->
-
 <div class="hero-images">
 
-```
-<div class="hero-photo">
-    <img src="IMG_1828.JPG" alt="SN Photography">
-    <div class="hero-text">SN PHOTOGRAPHY</div>
-</div>
+    <div class="hero-photo">
+        <img src="IMG_1828.JPG" alt="SN Photography">
+        <div class="hero-text">SN PHOTOGRAPHY</div>
+    </div>
 
-<div class="hero-photo">
-    <img src="IMG_1830.JPG" alt="SN Photography">
-    <div class="hero-text">CAPTURE THE MOMENT</div>
-</div>
+    <div class="hero-photo">
+        <img src="IMG_1830.JPG" alt="SN Photography">
+        <div class="hero-text">CAPTURE THE MOMENT</div>
+    </div>
 
 </div>
 
 <!-- HOME -->
-
 <header id="home">
+    <h1>SN Photography</h1>
+    <p>Photography • Photo Editing • Creative Work</p>
 
-```
-<h1>SN Photography</h1>
-
-<p>Photography • Photo Editing • Creative Work</p>
-
-<a href="#gallery" class="button">
-    View My Work
-</a>
-```
-
+    <a href="#gallery" class="button">
+        View My Work
+    </a>
 </header>
 
 <!-- GALLERY -->
-
 <section class="section" id="gallery">
 
-```
-<h2>My Work</h2>
+    <h2>My Work</h2>
 
-<p>Beautiful moments captured through my camera.</p>
+    <p>Beautiful moments captured through my camera.</p>
 
-<div class="filter-buttons">
-
-    <button onclick="filterGallery('all')">ALL</button>
-    <button onclick="filterGallery('portrait')">PORTRAIT</button>
-    <button onclick="filterGallery('nature')">NATURE</button>
-    <button onclick="filterGallery('event')">EVENT</button>
-    <button onclick="filterGallery('indoor')">INDOOR</button>
-    <button onclick="filterGallery('outdoor')">OUTDOOR</button>
-
-</div>
-
-<div class="gallery">
-
-    <div class="gallery-card nature outdoor"
-         onclick="openImage(0)">
-        <img src="sn11.jpg" alt="SN Photography">
+    <div class="filter-buttons">
+        <button onclick="filterGallery('all')">ALL</button>
+        <button onclick="filterGallery('portrait')">PORTRAIT</button>
+        <button onclick="filterGallery('nature')">NATURE</button>
+        <button onclick="filterGallery('event')">EVENT</button>
+        <button onclick="filterGallery('indoor')">INDOOR</button>
+        <button onclick="filterGallery('outdoor')">OUTDOOR</button>
     </div>
 
-    <div class="gallery-card portrait outdoor"
-         onclick="openImage(1)">
-        <img src="sn12.jpg" alt="SN Photography">
+    <div class="gallery">
+
+        <div class="gallery-card nature outdoor" onclick="openImage(0)">
+            <img src="sn11.jpg" alt="SN Photography">
+        </div>
+
+        <div class="gallery-card portrait outdoor" onclick="openImage(1)">
+            <img src="sn12.jpg" alt="SN Photography">
+        </div>
+
+        <div class="gallery-card event indoor" onclick="openImage(2)">
+            <img src="sn13.jpg" alt="SN Photography">
+        </div>
+
+        <div class="gallery-card portrait indoor" onclick="openImage(3)">
+            <img src="sn14.jpg" alt="SN Photography">
+        </div>
+
+        <div class="gallery-card nature outdoor" onclick="openImage(4)">
+            <img src="sn15.jpg" alt="SN Photography">
+        </div>
+
+        <div class="gallery-card event outdoor" onclick="openImage(5)">
+            <img src="_MG_1409.JPG" alt="SN Photography">
+        </div>
+
+        <div class="gallery-card portrait outdoor" onclick="openImage(6)">
+            <img src="_MG_1410.JPG" alt="SN Photography">
+        </div>
+
+        <div class="gallery-card nature indoor" onclick="openImage(7)">
+            <img src="_MG_1411.JPG" alt="SN Photography">
+        </div>
+
+        <div class="gallery-card event indoor" onclick="openImage(8)">
+            <img src="_MG_1412.JPG" alt="SN Photography">
+        </div>
+
     </div>
-
-    <div class="gallery-card event indoor"
-         onclick="openImage(2)">
-        <img src="sn13.jpg" alt="SN Photography">
-    </div>
-
-    <div class="gallery-card portrait indoor"
-         onclick="openImage(3)">
-        <img src="sn14.jpg" alt="SN Photography">
-    </div>
-
-    <div class="gallery-card nature outdoor"
-         onclick="openImage(4)">
-        <img src="sn15.jpg" alt="SN Photography">
-    </div>
-
-    <div class="gallery-card event outdoor"
-         onclick="openImage(5)">
-        <img src="_MG_1409.JPG" alt="SN Photography">
-    </div>
-
-    <div class="gallery-card portrait outdoor"
-         onclick="openImage(6)">
-        <img src="_MG_1410.JPG" alt="SN Photography">
-    </div>
-
-    <div class="gallery-card nature indoor"
-         onclick="openImage(7)">
-        <img src="_MG_1411.JPG" alt="SN Photography">
-    </div>
-
-    <div class="gallery-card event indoor"
-         onclick="openImage(8)">
-        <img src="_MG_1412.JPG" alt="SN Photography">
-    </div>
-
-</div>
-```
-
 </section>
 
 <!-- ABOUT -->
-
 <section class="section" id="about">
 
-```
-<div class="about-box">
+    <div class="about-box">
 
-    <span class="about-label">ABOUT ME</span>
+        <span class="about-label">ABOUT ME</span>
 
-    <h2>Capturing Moments,<br>Creating Memories.</h2>
+        <h2>Capturing Moments,<br>Creating Memories.</h2>
 
-    <p>
-        I am a photographer and photo editor who loves
-        capturing beautiful moments and turning them into
-        meaningful photographs.
-    </p>
+        <p>
+            I am a photographer and photo editor who loves
+            capturing beautiful moments and turning them into
+            meaningful photographs.
+        </p>
 
-    <p>
-        Through photography and creative editing, I aim to
-        preserve the emotions and stories behind every moment.
-    </p>
+        <p>
+            Through photography and creative editing, I aim to
+            preserve the emotions and stories behind every moment.
+        </p>
 
-</div>
-```
+    </div>
 
 </section>
 
 <!-- CONTACT -->
-
 <section class="section contact" id="contact">
 
-```
-<div class="contact-box">
+    <div class="contact-box">
 
-    <span class="contact-label">GET IN TOUCH</span>
+        <span class="contact-label">GET IN TOUCH</span>
 
-    <h2>Contact Me</h2>
+        <h2>Contact Me</h2>
 
-    <p class="contact-intro">
-        Have a project or creative idea?
-        Let's connect and create something meaningful.
-    </p>
-
-    <div class="contact-details">
-
-        <p>📸 <strong>SN Photography</strong></p>
-
-        <p>
-            📧 Email:
-            <a href="mailto:Sann3376@gmail.com">
-                Sann3376@gmail.com
-            </a>
+        <p class="contact-intro">
+            Have a project or creative idea?
+            Let's connect and create something meaningful.
         </p>
 
-        <p>
-            ✈️ Telegram:
-            <a href="https://t.me/+6588252143" target="_blank">
-                +65 8825 2143
-            </a>
-        </p>
+        <div class="contact-details">
 
-        <p>
-            💬 WhatsApp:
-            <a href="https://wa.me/6588252143" target="_blank">
-                +65 8825 2143
-            </a>
-        </p>
+            <p>📸 <strong>SN Photography</strong></p>
 
-        <p>
-            📞 Viber:
-            <a href="viber://chat?number=%2B6588252143">
-                +65 8825 2143
-            </a>
-        </p>
+            <p>
+                📧 Email:
+                <a href="mailto:Sann3376@gmail.com">
+                    Sann3376@gmail.com
+                </a>
+            </p>
 
-        <p>
-            🎵 TikTok:
-            <a href="https://www.tiktok.com/@sannaing6434"
-               target="_blank">
-                @sannaing6434
-            </a>
-        </p>
+            <p>
+                ✈️ Telegram:
+                <a href="https://t.me/+6588252143" target="_blank">
+                    +65 8825 2143
+                </a>
+            </p>
+
+            <p>
+                💬 WhatsApp:
+                <a href="https://wa.me/6588252143" target="_blank">
+                    +65 8825 2143
+                </a>
+            </p>
+
+            <p>
+                📞 Viber:
+                <a href="viber://chat?number=%2B6588252143">
+                    +65 8825 2143
+                </a>
+            </p>
+
+            <p>
+                🎵 TikTok:
+                <a href="https://www.tiktok.com/@sannaing6434" target="_blank">
+                    @sannaing6434
+                </a>
+            </p>
+
+        </div>
 
     </div>
-
-</div>
-```
 
 </section>
 
 <!-- LIGHTBOX -->
-
 <div class="lightbox" id="lightbox">
 
-```
-<span class="close" onclick="closeImage()">&times;</span>
+    <span class="close" onclick="closeImage()">&times;</span>
 
-<span class="prev" onclick="changeImage(-1)">&#10094;</span>
+    <span class="prev" onclick="changeImage(-1)">&#10094;</span>
 
-<img id="bigImage" src="" alt="SN Photography">
+    <img id="bigImage" src="" alt="SN Photography">
 
-<span class="next" onclick="changeImage(1)">&#10095;</span>
-```
+    <span class="next" onclick="changeImage(1)">&#10095;</span>
 
 </div>
 
 <!-- FOOTER -->
-
 <footer>
 
-```
-<div class="footer-logo">
-    SN PHOTOGRAPHY
-</div>
+    <div class="footer-logo">
+        SN PHOTOGRAPHY
+    </div>
 
-<p>
-    Photography • Photo Editing • Creative Work
-</p>
+    <p>
+        Photography • Photo Editing • Creative Work
+    </p>
 
-<span>
-    © 2026 SN Photography. All Rights Reserved.
-</span>
-```
+    <span>
+        © 2026 SN Photography. All Rights Reserved.
+    </span>
 
 </footer>
 
 <script>
-
-/* GALLERY IMAGES */
 
 const galleryImages = [
     "sn11.jpg",
@@ -678,13 +594,8 @@ const galleryImages = [
 
 let currentImage = 0;
 
-
-/* LIGHTBOX */
-
 function openImage(index) {
-
     currentImage = index;
-
     document.getElementById("bigImage").src =
         galleryImages[currentImage];
 
@@ -692,13 +603,10 @@ function openImage(index) {
         .classList.add("active");
 }
 
-
 function closeImage() {
-
     document.getElementById("lightbox")
         .classList.remove("active");
 }
-
 
 function changeImage(direction) {
 
@@ -715,9 +623,6 @@ function changeImage(direction) {
     document.getElementById("bigImage").src =
         galleryImages[currentImage];
 }
-
-
-/* FILTER */
 
 function filterGallery(category) {
 
@@ -736,11 +641,7 @@ function filterGallery(category) {
         }
 
     });
-
 }
-
-
-/* CLOSE LIGHTBOX BY CLICKING OUTSIDE */
 
 document.getElementById("lightbox")
 .addEventListener("click", function(e) {
@@ -750,9 +651,6 @@ document.getElementById("lightbox")
     }
 
 });
-
-
-/* KEYBOARD */
 
 document.addEventListener("keydown", function(e) {
 
