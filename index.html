@@ -624,23 +624,13 @@ function changeImage(direction) {
         galleryImages[currentImage];
 }
 function filterGallery(category) {
-
-    const cards =
-        document.querySelectorAll(".gallery-card");
+    const cards = document.querySelectorAll(".gallery-card");
 
     cards.forEach(card => {
-
-        if (
-            category === "all" ||
-            card.classList.contains(category)
-        ) {
-            card.style.display = "block";
-        } else {
-            card.style.display = "none";
-        }
-
+        card.style.display = "block";
     });
 }
+
 
 filterGallery("all");
 
